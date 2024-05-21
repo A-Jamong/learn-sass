@@ -1,0 +1,23 @@
+$base-color: #bf2243;
+$border-color: rgba($base-color, 0.7);
+
+.alert{
+  border: 1px solid $border_color;
+}
+:root{
+  --color: #56daa8;
+}
+.box1{
+  color: var(--color);
+}
+:root{
+  --color:#bf4433;
+}
+.box2{
+  color: var(--color);
+}
+.menu{
+  @at-root div{
+    border: 1px solid black;
+  }
+}

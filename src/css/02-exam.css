@@ -1,0 +1,25 @@
+.alert {
+  border: 1px solid rgba(191, 34, 67, 0.7);
+}
+
+:root {
+  --color: #56daa8;
+}
+
+.box1 {
+  color: var(--color);
+}
+
+:root {
+  --color:#bf4433;
+}
+
+.box2 {
+  color: var(--color);
+}
+
+div {
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=02-exam.css.map */

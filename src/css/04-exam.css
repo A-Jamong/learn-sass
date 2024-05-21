@@ -1,0 +1,22 @@
+.container {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+.container:focus {
+  overflow: initial;
+  position: initial;
+  clip: initial;
+  clip-path: initial;
+  width: initial;
+  margin: initial;
+  white-space: initial;
+}
+
+/*# sourceMappingURL=04-exam.css.map */
