@@ -1,1 +1,5 @@
-
+.box {
+  color: yellow;
+  background-color: rgb(114, 114, 69);
+  padding: 20px;
+}
