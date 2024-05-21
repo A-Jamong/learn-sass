@@ -1,0 +1,7 @@
+@use 'sass:math';
+
+@function PI() {
+	@return math.$pi;
+}
+
+@debug PI(); // 3.1415926536

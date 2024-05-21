@@ -1,0 +1,9 @@
+@use 'sass:meta';
+
+$nothing: null;
+
+@debug meta.type-of($nothing);
+@debug 9s + 21s;    // 30s
+@debug 1cm - 11cm;  // -10cm
+@debug 9px * 2px;   // 18px*px 🚨
+@debug 101px % 8px; // 5px
