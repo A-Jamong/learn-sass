@@ -1,0 +1,24 @@
+.error, .error--serious {
+  color: #bf2243;
+}
+.error--serious {
+  font-weight: bold;
+}
+
+.button--green, .button--blue, .button--red {
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  padding: 12px 8px;
+}
+
+.button--red {
+  background-color: red;
+}
+.button--blue {
+  background-color: blue;
+}
+.button--green {
+  background-color: green;
+}
+
+/*# sourceMappingURL=05-exam.css.map */

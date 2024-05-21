@@ -1,5 +1,14 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font: 100% Helvetica, sans-serif;
   color: #333;
   font-size: 1.5rem;
 }
+
+/*# sourceMappingURL=main.css.map */

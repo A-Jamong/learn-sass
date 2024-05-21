@@ -1,40 +1,62 @@
+@use 'sass:list';
+@use 'sass:meta';
+$breakpoint: 768px;
+
+// _mixins.scss 파일에 믹스인 작성
+@mixin sm {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
 @mixin autoMargin {
   margin-left: auto;
   margin-right: auto;
   margin-inline: auto;
 }
+
 // padding 관련 믹스인
 
-@mixin padding-inline-start($value){
+@mixin padding-inline-start($value) {
   padding-left: $value;
   padding-inline-start: $value;
 }
-@mixin padding-inline-end($value){
+
+@mixin padding-inline-end($value) {
   padding-right: $value;
   padding-inline-end: $value;
 }
-@mixin padding-block-start($value){
+
+@mixin padding-block-start($value) {
   padding-top: $value;
   padding-block-start: $value;
 }
-@mixin padding-block-end($value){
+
+@mixin padding-block-end($value) {
   padding-bottom: $value;
   padding-block-end: $value;
 }
 
-@mixin paddingX($value){
+@mixin paddingX($value) {
   @include padding-inline-start($value);
   @include padding-inline-end($value);
 }
-@mixin paddingY($value){
+
+@mixin paddingY($value) {
   @include padding-block-start($value);
   @include padding-block-end($value);
 }
 
-@mixin padding($value){
+@mixin padding($value) {
   @include paddingX($value);
   @include paddingY($value);
 }
+
 @mixin a11yHidden($focusable: true) {
   overflow: hidden;
   position: absolute;
@@ -69,6 +91,34 @@
   height: $height;
 }
 
+
+$position-values: static relative absolute fixed sticky;
+
+@mixin position($type, $args...) {
+  @each $key in $position-values {
+    @if not list.index($position-values, $type) {
+      @error '#{$type}은 유효한 position 값이 아닙니다. (예: static relative absolute fixed sticky)';
+    }
+  }
+
+  position: $type;
+
+	@if $type == sticky {
+    @supports not (position: sticky) {
+      poistion: fixed;
+    }
+  }
+
+  @each $name, $value in meta.keywords($args) {
+    #{$name}: $value;
+  }
+}
+
 .container {
-  @include a11yHidden;
+ @include sm{
+  background: pink;
+ }
+ @include lg{
+  background: yellow;
+ }
 }
